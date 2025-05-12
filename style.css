@@ -1,0 +1,124 @@
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(65, 65, 65);
+}
+
+/* Centering the calculator */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Calculator container */
+.calculator-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 16px;
+  background-color: #1e1e2f;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  width: 340px;
+  position: relative;
+  color: white;
+}
+
+/* Fake window buttons */
+.window-buttons {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+.window-buttons .btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.btn.red { background-color: #ff5f56; }
+.btn.yellow { background-color: #ffbd2e; }
+.btn.green { background-color: #27c93f; }
+
+/* Display */
+.display {
+  height: 70px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  background-color: #282c3c;
+  border-radius: 8px;
+  font-size: 32px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 20px;
+  color: #f0f0f0;
+  overflow: hidden;
+}
+
+/* Button area */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* General button styles */
+.button {
+  width: 60px;
+  height: 60px;
+  font-size: 20px;
+  border: none;
+  border-radius: 14px;
+  background-color: #3a3f55;
+  color: white;
+  transition: background-color 0.2s, transform 0.1s;
+  cursor: pointer;
+}
+
+/* Button hover/active effects */
+.button:hover {
+  background-color: #4b5068;
+}
+.button:active {
+  background-color: #5a5f77;
+  transform: scale(0.97);
+}
+
+/* Wide zero button */
+.button.zero {
+  width: 130px;
+}
+
+/* Type-specific buttons */
+.function {
+  background-color: #5865f2;
+  color: white;
+}
+.function:hover {
+  background-color: #6c76f5;
+}
+.operator {
+  background-color: #ff9500;
+  color: white;
+}
+.operator:hover {
+  background-color: #ffaa33;
+}
+.number {
+  background-color: #2f354e;
+}
+.number:hover {
+  background-color: #404864;
+}
